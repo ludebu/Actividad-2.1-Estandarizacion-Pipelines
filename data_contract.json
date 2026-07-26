@@ -1,0 +1,53 @@
+{
+  "dataset": "Iris",
+  "description": "Contrato de datos para validar la estructura y calidad del dataset Iris.",
+  "columns": {
+    "sepal_length": {
+      "type": "float",
+      "required": true,
+      "minimum": 4.0,
+      "maximum": 8.0
+    },
+    "sepal_width": {
+      "type": "float",
+      "required": true,
+      "minimum": 2.0,
+      "maximum": 4.5
+    },
+    "petal_length": {
+      "type": "float",
+      "required": true,
+      "minimum": 1.0,
+      "maximum": 7.0
+    },
+    "petal_width": {
+      "type": "float",
+      "required": true,
+      "minimum": 0.1,
+      "maximum": 2.6
+    },
+    "species": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    }
+  },
+  "valid_example": {
+    "sepal_length": 5.1,
+    "sepal_width": 3.5,
+    "petal_length": 1.4,
+    "petal_width": 0.2,
+    "species": "setosa"
+  },
+  "invalid_example": {
+    "sepal_length": 12.0,
+    "sepal_width": "",
+    "petal_length": 1.4,
+    "petal_width": 0.2,
+    "species": "rosa"
+  }
+}
